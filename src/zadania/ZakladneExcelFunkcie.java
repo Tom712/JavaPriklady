@@ -1,14 +1,14 @@
 package zadania;
 
-public class ScitaniePola {
+public class ZakladneExcelFunkcie {
     public static int scitanie(int cislo1, int cislo2) {
-        int sucet = cislo1 + cislo2;
-        return sucet;
+
+        return  cislo1 + cislo2;
     }
 
     public static int priemeruj(int cislo1, int cislo2) {
-        int priemer = cislo1 / cislo2;
-        return priemer;
+
+        return  cislo1 / cislo2;
     }
 
     public static void pocet(int []array) {
@@ -45,7 +45,7 @@ public class ScitaniePola {
 
     public static void main(String[] args) {
 
-        int[] cisla = {5, 2, 4, 3, 1};
+        int[] cisla = {2, 5, 4, 3, 1};
         int vysledok=0;
 
         /* pred robenim bonusu
