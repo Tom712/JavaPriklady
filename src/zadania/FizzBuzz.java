@@ -1,12 +1,9 @@
 package zadania;
 
 public class FizzBuzz {
+    ////////Copilot riesenie
 
-  /*
-
-  ////////Copilot riesenie
-
-  public static void fizzBuzz(int n) {
+  /*public static void fizzBuzz(int n) {
         for (int i=1;i<=n;i++) {
             if (i % 3 == 0 && i % 5 == 0) {
                 System.out.println("FizzBuzz");
