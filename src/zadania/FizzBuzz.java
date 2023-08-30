@@ -27,27 +27,27 @@ public class FizzBuzz {
 
         //moje riesenie
         int cislo = 1;
-        String cele = "";
+        StringBuilder cele = new StringBuilder();
         do {
             if (cislo % 3 == 0 && cislo % 5 == 0) {
                 //System.out.print("Fizz Buzz, ");
-                cele +="Fizz Buzz, ";
+                cele.append("Fizz Buzz, ");
             } else if (cislo % 3 == 0) {
                // System.out.print("Fizz, ");
-                cele +="Fizz, ";
+                cele.append("Fizz, ");
             } else if (cislo % 5 == 0) {
                 //System.out.print("Buzz, ");
-                cele +="Buzz, ";
+                cele.append("Buzz, ");
             } else {
                 //System.out.printf("%d, ",cislo);
-                cele += cislo + ", ";
+                cele.append(cislo).append(", ");
             }
             cislo++;
 
 
         } while (cislo <= 100);
 
-        cele = cele.substring(0,cele.length()-2);
+        cele = new StringBuilder(cele.substring(0, cele.length() - 2));
         System.out.println(cele);
 
     }
