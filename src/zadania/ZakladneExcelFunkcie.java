@@ -1,44 +1,53 @@
 package zadania;
 
 public class ZakladneExcelFunkcie {
-    public static int scitanie(int cislo1, int cislo2) {
+    public static int scitanie(int [] array) {
+        int vysledok=0;
 
-        return  cislo1 + cislo2;
+
+        for (int j : array) {
+            vysledok = vysledok + j;
+
+        }
+        return vysledok;
     }
 
-    public static int priemeruj(int cislo1, int cislo2) {
+    public static int priemeruj(int []array) {
+        ///vyuzijeme taky isty vypocet ako v scitani
+        int vysledok=0;
+        for (int j : array) {
+            vysledok = vysledok + j;
+        }
 
-        return  cislo1 / cislo2;
+        return vysledok/array.length;
     }
 
-    public static void pocet(int []array) {
-
-        System.out.println("Dlzka pola: "+ array.length);
-
+    public static int pocet(int []array) {
+        return array.length;
     }
 
-    public static void min(int [] array) {
+    public static int min(int [] array) {
         int min=array[0];
-        for (int i = 0 ; i<array.length; i++){
-            if(array[i]<min){
-                min=array[1];
+        for (int j : array) {
+            if (j < min) {
+                min = j;
             }
         }
 
-        System.out.println("najmensie cislo: "+ min);
+        return min;
     }
 
-    public static void max(int [] array) {
+    public static int max(int [] array) {
 
         int max=array[0];
 
-        for (int i = 0 ;i< array.length; i++){
-            if(array[i]>max){
-                max=array[1];
+        for (int j : array) {
+            if (j > max) {
+                max = j;
             }
         }
 
-        System.out.println("najvacsie cislo: "+ max);
+        return max;
 
     }
 
@@ -46,7 +55,7 @@ public class ZakladneExcelFunkcie {
     public static void main(String[] args) {
 
         int[] cisla = {2, 5, 4, 3, 1};
-        int vysledok=0;
+        //int vysledok=0;
 
         /* pred robenim bonusu
 
@@ -57,21 +66,23 @@ public class ZakladneExcelFunkcie {
 
 
         ////bonus 1
-        for (int i=0; i < cisla.length ;i++ ){
+       /* for (int i=0; i < cisla.length ;i++ ){
             vysledok =scitanie(vysledok,cisla[i]);
 
         }
-        System.out.println("Vysledok scitania: "+vysledok);
+        System.out.println("Vysledok scitania: "+vysledok);*/
+
+        System.out.println("Vysledok scitania: "+scitanie(cisla));
 
         ///bonus 2
 
-        System.out.println("Vysledok priemeru: "+priemeruj(vysledok,cisla.length));
+        System.out.println("Vysledok priemeru: "+priemeruj(cisla));
 
 
         //bonus 3
-        pocet(cisla);
-        min(cisla);
-        max(cisla);
+        System.out.println("Pocet cisel: "+pocet(cisla));
+        System.out.println("Najmensie cislo: "+min(cisla));
+        System.out.println("Najvacsie cislo: "+max(cisla));
 
 
     }
