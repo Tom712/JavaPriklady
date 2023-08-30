@@ -29,13 +29,13 @@ public class FizzBuzz {
         int cislo = 1;
         do {
             if (cislo % 3 == 0 && cislo % 5 == 0) {
-                System.out.println("Fizz Buzz");
+                System.out.print("Fizz Buzz, ");
             } else if (cislo % 3 == 0) {
-                System.out.println("Fizz");
+                System.out.print("Fizz, ");
             } else if (cislo % 5 == 0) {
-                System.out.println("Buzz");
+                System.out.print("Buzz, ");
             } else {
-                System.out.println(cislo);
+                System.out.printf("%d, ",cislo);
             }
             cislo++;
         } while (cislo <= 100);
