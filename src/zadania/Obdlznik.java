@@ -1,25 +1,15 @@
 package zadania;
 
 import java.util.Scanner;
-
 public class Obdlznik {
-
-    public static int obvod(int a, int b) {
+    public static double obvod(double a, double b) {
         return 2 * (a + b);
     }
-    public static int obsah(int a, int b) {
-        return a * b;
-    }
+    public static double obsah(double a, double b) { return a * b; }
 public static void main(String[] args) {
-        /*int a = 5;
-        int b = 10;
-
-        System.out.println("Obvod obdlznika o stranach " + a + " a " + b + " je " + obvod(a, b));
-        System.out.println("Obsah obdlznika o stranach " + a + " a " + b + " je " + obsah(a, b));*/
-
         for (;;){
-            int a ;
-            int b ;
+            double a ;
+            double b ;
 
             Scanner sc = new Scanner(System.in);
             System.out.println("Napis s ak chces zadat strany alebo q ak chces skoncit.");
@@ -29,17 +19,12 @@ public static void main(String[] args) {
                 break;
             }else if(vstup.equals("s")){
                 System.out.println("Zadaj stranu a: ");
-                a = sc.nextInt();
+                a = sc.nextDouble();
                 System.out.println("Zadaj stranu b: ");
-                b = sc.nextInt();
+                b = sc.nextDouble();
                 System.out.println("Obvod obdlznika o stranach " + a + " a " + b + " je " + obvod(a, b));
                 System.out.println("Obsah obdlznika o stranach " + a + " a " + b + " je " + obsah(a, b));
-
-
             }
         }
-
-
     }
-
 }

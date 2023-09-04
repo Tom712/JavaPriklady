@@ -22,8 +22,7 @@ public class FizzBuzz {
     }
 */
     public static void main(String[] args) {
-        /////fizzBuzz(100);
-
+        /////fizzBuzz(100)
 
         //moje riesenie
         int cislo = 1;
